@@ -1,0 +1,35 @@
+module Fourbitcount(
+    input clk , reset,
+    output logic [3:0] ou,
+    output logic [6:0] seg;
+    ouput logic y
+);
+SevenDecoder u_SevenDecoder(
+    .A(ou),
+    .seg(seg)
+);
+logic [2:0] C;
+
+    always_ff @ (posedge clk) 
+    begin 
+        if (reset)
+        begin
+            ou[0] = 0; 
+            ou[2] = 0; 
+            ou[1] = 0; 
+            C[0] = 0;
+            C[1] = 0;
+            C[2] = 0;
+       end
+       else
+       if (clk) 
+       begin
+            C[0] = ou[0] & 1;
+            ou[0] = ou[0] ^ 1;
+            C[1] = ou[1] & C[0];
+            ou[1] = ou[1] ^ C[0];
+            y = ou[2] & C[1];
+            ou[2] = ou[2] ^ C[1];
+        end
+    end
+endmodule

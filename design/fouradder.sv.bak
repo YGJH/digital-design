@@ -1,0 +1,58 @@
+module fouradder(
+	input A1,
+	input A2,
+	input A3,
+  input A4,
+  input B1,
+  input B2,
+  input B3,
+  input B4,
+  input Cin,
+  output logic S0, 
+	output logic S1,
+  output logic S2,
+  output logic S3,
+	output logic C4,
+);
+
+logic X1;
+logic X2;
+logic X3;
+logic C1;
+logic C2;
+logic C3;
+logic C4;
+
+xor XOR1(X1 , A1 , B1);
+xor XOR2(S0 , X1 , Cin);
+and AND1(X2 , A1 , B1);
+and AND2(X3 , A1 , Cin);
+and AND3(X4 , B1 , Cin);
+or OR1(C1 , X3 , X2);
+or OR2(C1 , C1 , X4);
+
+xor XOR1(X5 , A2 , B2);
+xor XOR2(S1 , X5 , C1);
+and AND1(X6 , A2 , B2);
+and AND2(X7 , A2 , C1);
+and AND3(X8 , B2 , C1);
+or OR1(C2 , X8 , X7);
+or OR2(C2 , C2 , X6);
+
+xor XOR1(X9 , A3 , B3);
+xor XOR2(S2 , X9 , C2);
+and AND1(X10 , A3 , B3);
+and AND2(X11 , A3 , C2);
+and AND3(X12 , B3 , C2);
+or OR1(C3 , X11 , X12);
+or OR2(C3 , C3 , X10);
+
+xor XOR1(X14 , A4 , B4);
+xor XOR2(S3 , X14 , C3);
+and AND1(X16 , A4 , B4);
+and AND2(X17 , A4 , C3);
+and AND3(X18 , B4 , C3);
+or OR1(C4 , X18 , X16);
+or OR2(C4 , C4 , X17);
+
+

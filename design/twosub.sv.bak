@@ -1,0 +1,36 @@
+module twosub(
+	input se;
+	input [3:0] A;
+	input [3:0] B;	
+	input Cin;
+	FA_1B u_FA_1B(
+    input A,
+    input B,
+    input Cin,
+    output logic S,
+    output logic Cout
+	);
+	output logic [3:0] S;
+	output logic [3:0] C;
+);
+
+
+
+
+logic X1;
+xor XOR1(B[0] , B[0] , se);
+xor XOR2(B[1] , B[1] , se);
+xor XOR3(B[2] , B[2] , se);
+xor XOR4(B[3] , B[3] , se);
+u_FA_1B(A[0] , B[0] , Cin , S[0] , C[0]);
+u_FA_1B(A[1] , B[1] , C[0] , S[1] , C[1]);
+u_FA_1B(A[2] , B[2] , C[1] , S[2] , C[2]);
+u_FA_1B(A[3] , B[3] , C[2] , S[3] , C[3]);
+
+
+
+endmodule
+
+
+
+

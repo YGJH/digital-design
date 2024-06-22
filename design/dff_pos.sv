@@ -1,0 +1,19 @@
+module dff_pos_sync(
+    input d,
+    input clk,
+    input reset,
+    output logic q
+);
+
+    always_ff @ (posedge clk or posedge reset )
+    begin
+        if (reset)
+        begin
+            q <= 1'b0;
+        end
+        else
+        begin
+            q <= d;
+        end
+    end
+endmodule

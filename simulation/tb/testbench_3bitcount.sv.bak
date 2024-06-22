@@ -1,0 +1,19 @@
+module testbench_3bitcount;
+    logic [2:0] Q;
+    logic clk , reset;
+
+    bit_count u_bit_count(
+        .clk(clk),
+        .reset(reset),
+        .Q(Q),
+    );
+    always #5 clk = ~clk;
+    
+    initial begin
+        clk = 0; reset = 1;
+        #10 reset = 0;
+        #500 $stop;
+    end
+
+endmodule
+

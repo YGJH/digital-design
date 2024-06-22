@@ -1,0 +1,18 @@
+module testbench_Fourbitcount;
+
+    logic clk, reset;
+    logic [3:0] q;
+    module Fourbitcount(
+        .clk(clk),
+        .reset(reset),
+        .ou(ou),
+        .seg(seg),
+        .y(y)
+    );
+    always #5 clk = ~clk;
+    initial begin
+        clk = 0 ; reset = 1;
+        #10 reset = 0;
+        #500 $stop;
+    end
+endmodule

@@ -1,0 +1,45 @@
+module 4bit_count(
+    input clk,
+    input reset,
+    input x,
+    output logic [3:0] Q
+);
+logic [3:0] C , tmp , outl;
+logic se ;
+always_ff @ (posedge clk) 
+    begin
+        if (reset) 
+        begin
+            q[0] = 0;
+            q[1] = 0;
+            q[2] = 0;
+            q[3] = 0;
+            C[0] = 0;
+            C[1] = 0;
+            C[2] = 0;
+            C[3] = 0;
+        end
+        else if( x == 0 ) 
+            C[0] = clk & q[0];
+            q[0] = q[0] ^ clk;
+            C[1] = C[0] & q[1];
+            q[1] = C[0] ^ q[1];
+            C[2] = C[1] & q[2];
+            q[2] = C[1] ^ q[2];
+            C[3] = C[2] & q[3];
+            q[3] = q[3] ^ C[2];
+        end
+        else if(x == 1)
+        begin
+            se = 1;
+            tmp = 4'b0001;
+            outl = q;
+            twosub u_twosub(
+                .se(se),
+                .A(outl),
+                .B(tmp),
+                .S(q),
+            );
+        end
+    end
+endmodule 

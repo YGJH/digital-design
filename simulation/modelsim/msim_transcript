@@ -1,0 +1,77 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do mcu_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/Users/jihut/Downloads/de0_empty/simulation/tb {C:/Users/jihut/Downloads/de0_empty/simulation/tb/tb_birth.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_birth
+# 
+# Top level modules:
+# 	tb_birth
+# vlog -sv -work work +incdir+C:/Users/jihut/Downloads/de0_empty/design {C:/Users/jihut/Downloads/de0_empty/design/BirthDay.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bir
+# 
+# Top level modules:
+# 	bir
+# vlog -sv -work work +incdir+C:/Users/jihut/Downloads/de0_empty/design {C:/Users/jihut/Downloads/de0_empty/design/dff_pos.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dff_pos_sync
+# 
+# Top level modules:
+# 	dff_pos_sync
+# 
+do compile.do
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_birth
+# 
+# Top level modules:
+# 	tb_birth
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bir
+# 
+# Top level modules:
+# 	bir
+do sim.dom
+# Cannot open macro file: sim.dom
+do sim.do
+# vsim -voptargs=+acc work.tb_birth 
+# Loading sv_std.std
+# Loading work.tb_birth
+# Loading work.bir
+# Loading work.dff_pos_sync
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: jihut  Hostname: CHARLES  ProcessID: 17120
+# 
+#           Attempting to use alternate WLF file "./wlftnchbfr".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftnchbfr
+# 
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/a'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/b'.
+# Executing ONERROR command at macro ./wave.do line 14
+# ** Error: (vish-4014) No objects found matching '/testbench/adder1/s'.
+# Executing ONERROR command at macro ./wave.do line 15
+# ** Error: (vish-4014) No objects found matching '/testbench/b[6]'.
+# Executing ONERROR command at macro ./wave.do line 16
+# ** Error: (vish-4014) No objects found matching '/testbench/b[5]'.
+# Executing ONERROR command at macro ./wave.do line 17
+# Break in Module tb_birth at ../tb/tb_birth.sv line 16
+# Simulation Breakpoint: Break in Module tb_birth at ../tb/tb_birth.sv line 16
+# MACRO ./sim.do PAUSED at line 7
+add wave -position insertpoint  \
+sim:/tb_birth/birth \
+sim:/tb_birth/clk \
+sim:/tb_birth/reset

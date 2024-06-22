@@ -1,0 +1,72 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\jihut\Downloads\de0_empty\simulation\modelsim
+vbir
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+!s100 R][5SD=bBDfah0<Ing5cT0
+IHHiBM;<@lSH8aDlncYP;Z3
+Z2 V<PZNW5UN5c^bTc;?:BWj]3
+Z3 !s105 BirthDay_sv_unit
+S1
+Z4 dC:\Users\jihut\Downloads\de0_empty\simulation\modelsim
+Z5 w1716965477
+8../../design/BirthDay.sv
+F../../design/BirthDay.sv
+L0 1
+Z6 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1717309709.144000
+!s107 ../../design/BirthDay.sv|
+!s90 -reportprogress|300|../../design/BirthDay.sv|
+!s101 -O0
+o-O0
+vdff_pos_sync
+R1
+Z7 IhF18QY7aZ9EJ9=dG3hHiA3
+Z8 V`]VoOIMlk_efIg]Q6JWKF3
+S1
+R4
+Z9 w1716366829
+Z10 8C:/Users/jihut/Downloads/de0_empty/design/dff_pos.sv
+Z11 FC:/Users/jihut/Downloads/de0_empty/design/dff_pos.sv
+L0 1
+R6
+r1
+31
+Z12 o-sv -work work -O0
+Z13 !s92 -sv -work work +incdir+C:/Users/jihut/Downloads/de0_empty/design -O0
+Z14 !s100 106hW:[<=kaR2@BinbO7Q1
+Z15 !s105 dff_pos_sv_unit
+Z16 !s108 1717309654.248000
+Z17 !s107 C:/Users/jihut/Downloads/de0_empty/design/dff_pos.sv|
+Z18 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jihut/Downloads/de0_empty/design|C:/Users/jihut/Downloads/de0_empty/design/dff_pos.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vtb_birth
+R1
+Z19 I_`jR;EH3m9O8Qg8fFC=6z0
+Z20 V[MlVQ9^a_ZePBc<bP=KKl2
+Z21 !s105 tb_birth_sv_unit
+S1
+R4
+Z22 w1716965093
+Z23 8../tb/tb_birth.sv
+Z24 F../tb/tb_birth.sv
+L0 1
+R6
+r1
+31
+o-O0
+!i10b 1
+Z25 !s100 l]ob7=ZTHN;Q1?_m:2FEg1
+!s85 0
+Z26 !s108 1717309709.073000
+Z27 !s107 ../tb/tb_birth.sv|
+Z28 !s90 -reportprogress|300|../tb/tb_birth.sv|
+!s101 -O0

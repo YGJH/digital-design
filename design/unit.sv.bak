@@ -1,0 +1,70 @@
+module unit_digit(// > 9 ==> reset
+    input clk , reset , c_in,
+    output [3:0] q,
+    output carry
+);
+
+
+logic [3:0] q_;
+dff_pos_sync dff1(
+    .d(q[0]),
+    .clk(clk),
+    .reset(reset),
+    .q(q_[0])
+);
+dff_pos_sync dff2(
+    .d(q[1]),
+    .clk(clk),
+    .reset(reset),
+    .q(q_[1])
+);
+dff_pos_sync dff3(
+    .d(q[2]),
+    .clk(clk),
+    .reset(reset),
+    .q(q_[2])
+);
+dff_pos_sync dff4(
+    .d(q[3]),
+    .clk(clk),
+    .reset(reset),
+    .q(q_[3])
+);
+logic [3:0]C;
+FA_1B u_fa1(
+    .A(q_[0]),
+    .B(clk),
+    .S(q[0]),
+    .Cout(C[0])
+);
+FA_1B u_fa2(
+    .A(q_[1]),
+    .B(C[0]),
+    .S(q[1]),
+    .Cout(C[1])
+);
+
+FA_1B u_fa2(
+    .A(q_[2]),
+    .B(C[1]),
+    .S(q[2]),
+    .Cout(C[2])
+);
+
+FA_1B u_fa2(
+    .A(q_[3]),
+    .B(C[2]),
+    .S(q[3]),
+    .Cout(C[3])
+);
+logic k;
+logic [3:0]kk;
+k = q[3] & q[1] || q[3] & q[2]; // >= 9
+carry = k;
+q[0] = ~k & q[0];
+q[1] = ~k & q[1];
+q[2] = ~k & q[2];
+q[3] = ~k & q[3];
+
+endmodule
+

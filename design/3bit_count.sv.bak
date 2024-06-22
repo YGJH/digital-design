@@ -1,0 +1,27 @@
+module 3bit_count(
+    input clk, reset,
+    output logic [2:0] Q
+);
+
+
+logic [1:0] C;
+
+always_ff @ (posegde clk)
+begin
+    if (reset)
+    begin 
+        assign Q[0] = 1'b0;
+        assign Q[1] = 1'b0;
+        assign Q[2] = 1'b0;
+    end
+    else
+    begin 
+         if(clk)
+            assign C[0] = Q[0] & 1;
+            assign Q[0] = Q[0] ^ 1;
+            assign C[1] = Q[1] & C[0];
+            assign Q[1] = Q[1] ^ C[0];
+            assign Q[2] = Q[2] ^ C[1];
+    end
+end
+endmodule

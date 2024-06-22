@@ -1,0 +1,45 @@
+moduele tree2eightDecoder(
+  input A1,
+  input A2,
+  input A3,
+  output S1,
+  output S2,
+  output S3,
+  output S4,
+  output S5,
+  output S6,
+  output S7,
+  output S8
+);
+logic X1
+not NOT1( X1 , A1 );
+not NOT2( X2 , A2 );
+not NOT3( X3 , A3 );
+
+//0
+or NOR1( X4 , X1 , X2 );
+or NOR2( X5 , X2  , X3 );
+nor AND2( S1 , X4 , X5 );
+//1
+and AND3( X6 , A1 , X2);
+and AND4( S2 , X3 , X6);
+//2
+and AND5(X7 , A2 , X1);
+and AND6(S3 , X3 , X7 );
+//3 
+and AND8( X8 , A1 , A2);
+and AND9( S4 , X3 , X8);
+//4
+and AND10( X9 , A3, X1);
+and AND11( S5 , X9 , X2);
+//5
+and AND12( X10 , A3 , A1);
+and AND13( S6 , X10 , X2);
+//6 
+and AND14( X11 , A2 , A3);
+and AND15( S7 , X11 , X1);
+//7
+and AND16(X12 , A2 , A3);
+and AND17(S8 , X12 , A1);
+
+endmodule
