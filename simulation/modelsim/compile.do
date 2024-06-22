@@ -3,8 +3,8 @@
 
 
 # ------------------------------------------------------------
-vlog ../tb/tb_birth.sv
-vlog ../../design/BirthDay.sv
+vlog ../tb/tb_fourAdder.sv
+vlog ../../design/fouradder.sv
 
 
 

@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone III"
 set_global_assignment -name DEVICE EP3C16F484C6
-set_global_assignment -name TOP_LEVEL_ENTITY tb_birth
+set_global_assignment -name TOP_LEVEL_ENTITY tb_fourAdder
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 12.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:15:48  SEPTEMBER 19, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.1
@@ -105,6 +105,7 @@ set_location_assignment PIN_H7 -to SW[6]
 set_location_assignment PIN_E3 -to SW[7]
 set_location_assignment PIN_E4 -to SW[8]
 set_location_assignment PIN_D2 -to SW[9]
+set_global_assignment -name SYSTEMVERILOG_FILE simulation/tb/tb_fourAdder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE simulation/tb/tb_birth.sv
 set_global_assignment -name SYSTEMVERILOG_FILE design/BirthDay.sv
 set_global_assignment -name SYSTEMVERILOG_FILE simulation/tb/tb_student_id.sv
