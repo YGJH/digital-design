@@ -1,40 +1,64 @@
-|tb_birth
+|tb_fourAdder
 
 
-|tb_birth|bir:ubir
-clk => clk.IN4
-reset => reset.IN4
-birth[0] <= dff_pos_sync:uf1.q
-birth[1] <= dff_pos_sync:uf2.q
-birth[2] <= dff_pos_sync:uf3.q
-birth[3] <= dff_pos_sync:uf4.q
+|tb_fourAdder|fouradder:fa
+A[0] => A[0].IN4
+A[1] => ~NO_FANOUT~
+A[2] => ~NO_FANOUT~
+A[3] => ~NO_FANOUT~
+B[0] => B[0].IN4
+B[1] => ~NO_FANOUT~
+B[2] => ~NO_FANOUT~
+B[3] => ~NO_FANOUT~
+Cin => Cin.IN1
+S[0] <= FA_1B:FA_1.S
+S[1] <= FA_1B:FA_2.S
+S[2] <= FA_1B:FA_3.S
+S[3] <= FA_1B:FA_4.S
+Cout <= FA_1B:FA_4.Cout
 
 
-|tb_birth|bir:ubir|dff_pos_sync:uf1
-d => q~reg0.DATAIN
-clk => q~reg0.CLK
-reset => q~reg0.ACLR
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|tb_fourAdder|fouradder:fa|FA_1B:FA_1
+A => XOR1.IN0
+A => AND2.IN0
+B => XOR1.IN1
+B => AND2.IN1
+Cin => XOR2.IN1
+Cin => AND1.IN1
+S <= XOR2.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= OR1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tb_birth|bir:ubir|dff_pos_sync:uf2
-d => q~reg0.DATAIN
-clk => q~reg0.CLK
-reset => q~reg0.ACLR
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|tb_fourAdder|fouradder:fa|FA_1B:FA_2
+A => XOR1.IN0
+A => AND2.IN0
+B => XOR1.IN1
+B => AND2.IN1
+Cin => XOR2.IN1
+Cin => AND1.IN1
+S <= XOR2.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= OR1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tb_birth|bir:ubir|dff_pos_sync:uf3
-d => q~reg0.DATAIN
-clk => q~reg0.CLK
-reset => q~reg0.ACLR
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|tb_fourAdder|fouradder:fa|FA_1B:FA_3
+A => XOR1.IN0
+A => AND2.IN0
+B => XOR1.IN1
+B => AND2.IN1
+Cin => XOR2.IN1
+Cin => AND1.IN1
+S <= XOR2.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= OR1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tb_birth|bir:ubir|dff_pos_sync:uf4
-d => q~reg0.DATAIN
-clk => q~reg0.CLK
-reset => q~reg0.ACLR
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|tb_fourAdder|fouradder:fa|FA_1B:FA_4
+A => XOR1.IN0
+A => AND2.IN0
+B => XOR1.IN1
+B => AND2.IN1
+Cin => XOR2.IN1
+Cin => AND1.IN1
+S <= XOR2.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= OR1.DB_MAX_OUTPUT_PORT_TYPE
 
 
