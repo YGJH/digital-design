@@ -1,4 +1,4 @@
-vsim -voptargs=+acc work.tb_fourAdder
+vsim -voptargs=+acc work.tb_final_exam
 view structure wave signals
 
 do wave.do

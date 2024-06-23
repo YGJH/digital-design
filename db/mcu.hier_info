@@ -1,15 +1,110 @@
-|tb_fourAdder
+|tb_final_exam
 
 
-|tb_fourAdder|fouradder:fa
-A[0] => A[0].IN4
-A[1] => ~NO_FANOUT~
-A[2] => ~NO_FANOUT~
-A[3] => ~NO_FANOUT~
-B[0] => B[0].IN4
-B[1] => ~NO_FANOUT~
-B[2] => ~NO_FANOUT~
-B[3] => ~NO_FANOUT~
+|tb_final_exam|finall:ff
+clk => clk.IN2
+reset => reset.IN2
+S[0] <= SS[0].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= SS[1].DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= SS[2].DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= SS[3].DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+sum[3] <= tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+tm[0] <= tmpp[0].DB_MAX_OUTPUT_PORT_TYPE
+tm[1] <= tmpp[1].DB_MAX_OUTPUT_PORT_TYPE
+tm[2] <= tmpp[2].DB_MAX_OUTPUT_PORT_TYPE
+tm[3] <= tmpp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_final_exam|finall:ff|FourBit_dff:dd1
+clk => clk.IN4
+reset => reset.IN4
+d[0] => d[0].IN1
+d[1] => d[1].IN1
+d[2] => d[2].IN1
+d[3] => d[3].IN1
+q[0] <= dff_pos_sync:df1.q
+q[1] <= dff_pos_sync:df2.q
+q[2] <= dff_pos_sync:df3.q
+q[3] <= dff_pos_sync:df4.q
+
+
+|tb_final_exam|finall:ff|FourBit_dff:dd1|dff_pos_sync:df1
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_final_exam|finall:ff|FourBit_dff:dd1|dff_pos_sync:df2
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_final_exam|finall:ff|FourBit_dff:dd1|dff_pos_sync:df3
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_final_exam|finall:ff|FourBit_dff:dd1|dff_pos_sync:df4
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_final_exam|finall:ff|StudentID:st2
+clk => clk.IN4
+reset => reset.IN4
+id[0] <= dff_pos_sync:u_dff1.q
+id[1] <= dff_pos_sync:u_dff2.q
+id[2] <= dff_pos_sync:u_dff3.q
+id[3] <= dff_pos_sync:u_dff4.q
+
+
+|tb_final_exam|finall:ff|StudentID:st2|dff_pos_sync:u_dff1
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_final_exam|finall:ff|StudentID:st2|dff_pos_sync:u_dff2
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_final_exam|finall:ff|StudentID:st2|dff_pos_sync:u_dff3
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_final_exam|finall:ff|StudentID:st2|dff_pos_sync:u_dff4
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_final_exam|finall:ff|fouradder:ff3
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
 Cin => Cin.IN1
 S[0] <= FA_1B:FA_1.S
 S[1] <= FA_1B:FA_2.S
@@ -18,7 +113,7 @@ S[3] <= FA_1B:FA_4.S
 Cout <= FA_1B:FA_4.Cout
 
 
-|tb_fourAdder|fouradder:fa|FA_1B:FA_1
+|tb_final_exam|finall:ff|fouradder:ff3|FA_1B:FA_1
 A => XOR1.IN0
 A => AND2.IN0
 B => XOR1.IN1
@@ -29,7 +124,7 @@ S <= XOR2.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= OR1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tb_fourAdder|fouradder:fa|FA_1B:FA_2
+|tb_final_exam|finall:ff|fouradder:ff3|FA_1B:FA_2
 A => XOR1.IN0
 A => AND2.IN0
 B => XOR1.IN1
@@ -40,7 +135,7 @@ S <= XOR2.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= OR1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tb_fourAdder|fouradder:fa|FA_1B:FA_3
+|tb_final_exam|finall:ff|fouradder:ff3|FA_1B:FA_3
 A => XOR1.IN0
 A => AND2.IN0
 B => XOR1.IN1
@@ -51,7 +146,7 @@ S <= XOR2.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= OR1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tb_fourAdder|fouradder:fa|FA_1B:FA_4
+|tb_final_exam|finall:ff|fouradder:ff3|FA_1B:FA_4
 A => XOR1.IN0
 A => AND2.IN0
 B => XOR1.IN1

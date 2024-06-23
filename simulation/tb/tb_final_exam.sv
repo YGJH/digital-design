@@ -1,0 +1,21 @@
+module tb_final_exam;
+
+logic clk , reset;
+logic [3:0]S , sum , tm;
+
+
+finall ff(
+    .clk(clk),
+    .reset(reset),
+    .S(S),
+    .sum(sum),
+    .tm(tm)
+);
+
+always #5 clk = ~clk;
+    initial begin 
+        reset = 1 ; clk = 0 ;
+    #10 reset = 0;
+    #500 $stop;
+    end
+endmodule

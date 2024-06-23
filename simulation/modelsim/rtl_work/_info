@@ -3,72 +3,165 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\jihut\Downloads\de0_empty\simulation\modelsim
-vFA_1B
+vdff_pos_sync
 Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-Z2 I<DYHVE@kzbDRLPGFX5lVm2
-Z3 VNCgc=:H8FAABAnlb3@:=j2
+Z2 IhF18QY7aZ9EJ9=dG3hHiA3
+Z3 V`]VoOIMlk_efIg]Q6JWKF3
 S1
 Z4 dC:\Users\jihut\Downloads\de0_empty\simulation\modelsim
-Z5 w1714547602
-Z6 8C:/Users/jihut/Downloads/de0_empty/design/fadder.sv
-Z7 FC:/Users/jihut/Downloads/de0_empty/design/fadder.sv
+Z5 w1716366829
+Z6 8C:/Users/jihut/Downloads/de0_empty/design/dff_pos.sv
+Z7 FC:/Users/jihut/Downloads/de0_empty/design/dff_pos.sv
 L0 1
 Z8 OV;L;10.1d;51
 r1
 31
 Z9 o-sv -work work -O0
-Z10 n@f@a_1@b
-Z11 !s92 -sv -work work +incdir+C:/Users/jihut/Downloads/de0_empty/design -O0
-Z12 !s100 YNm7ljDPIHM^oHhoX8>E`1
-Z13 !s105 fadder_sv_unit
-Z14 !s108 1719039528.908000
-Z15 !s107 C:/Users/jihut/Downloads/de0_empty/design/fadder.sv|
-Z16 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jihut/Downloads/de0_empty/design|C:/Users/jihut/Downloads/de0_empty/design/fadder.sv|
+Z10 !s92 -sv -work work +incdir+C:/Users/jihut/Downloads/de0_empty/design -O0
+Z11 !s100 106hW:[<=kaR2@BinbO7Q1
+Z12 !s105 dff_pos_sv_unit
+Z13 !s108 1719069086.208000
+Z14 !s107 C:/Users/jihut/Downloads/de0_empty/design/dff_pos.sv|
+Z15 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jihut/Downloads/de0_empty/design|C:/Users/jihut/Downloads/de0_empty/design/dff_pos.sv|
 !i10b 1
 !s85 0
 !s101 -O0
+vFA_1B
+R1
+Z16 I<DYHVE@kzbDRLPGFX5lVm2
+Z17 VNCgc=:H8FAABAnlb3@:=j2
+S1
+R4
+Z18 w1714547602
+Z19 8C:/Users/jihut/Downloads/de0_empty/design/fadder.sv
+Z20 FC:/Users/jihut/Downloads/de0_empty/design/fadder.sv
+L0 1
+R8
+r1
+31
+R9
+R10
+Z21 n@f@a_1@b
+Z22 !s100 YNm7ljDPIHM^oHhoX8>E`1
+Z23 !s105 fadder_sv_unit
+Z24 !s108 1719069086.128000
+Z25 !s107 C:/Users/jihut/Downloads/de0_empty/design/fadder.sv|
+Z26 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jihut/Downloads/de0_empty/design|C:/Users/jihut/Downloads/de0_empty/design/fadder.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vfinall
+R1
+!i10b 1
+!s100 2nIWRB:;o4];fNg5_ZXlC1
+IYeeNQnal[[[QdJDe;[]jJ2
+Z27 V65aI_Alg<OF65EA=hKnSW2
+Z28 !s105 final_exam_sv_unit
+S1
+R4
+Z29 w1719069073
+8../../design/final_exam.sv
+F../../design/final_exam.sv
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1719069088.045000
+!s107 ../../design/final_exam.sv|
+!s90 -reportprogress|300|../../design/final_exam.sv|
+!s101 -O0
+o-O0
 vfouradder
 R1
-!i10b 1
-!s100 @n?iozQR8lfiH5?_2_z9d1
-I;3I[;7m1ZP[?bR^kk5LaC0
-Z17 VYP?MGV3aRkdLHo8=NUI=V2
-Z18 !s105 fouradder_sv_unit
+Z30 If`fM02Ci^M54i>EZ@@llo2
+Z31 VYP?MGV3aRkdLHo8=NUI=V2
 S1
 R4
-Z19 w1719039517
-8../../design/fouradder.sv
-F../../design/fouradder.sv
+Z32 w1719039517
+Z33 8C:/Users/jihut/Downloads/de0_empty/design/fouradder.sv
+Z34 FC:/Users/jihut/Downloads/de0_empty/design/fouradder.sv
 L0 1
 R8
 r1
-!s85 0
 31
-!s108 1719039537.869000
-!s107 ../../design/fouradder.sv|
-!s90 -reportprogress|300|../../design/fouradder.sv|
+R9
+R10
+Z35 !s100 E<:Q56_;QfCjVoeLzhN<_2
+Z36 !s105 fouradder_sv_unit
+Z37 !s108 1719069086.263000
+Z38 !s107 C:/Users/jihut/Downloads/de0_empty/design/fouradder.sv|
+Z39 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jihut/Downloads/de0_empty/design|C:/Users/jihut/Downloads/de0_empty/design/fouradder.sv|
+!i10b 1
+!s85 0
 !s101 -O0
-o-O0
-vtb_fourAdder
+vFourBit_dff
 R1
-Z20 Ib?<Tze0jI>@C4mjZ;C<H12
-Z21 VMH1^zVJ`U]cZNjT[V`_4Q1
-Z22 !s105 tb_fourAdder_sv_unit
+Z40 IWBiP;d3TJG9?U3EBYT@io3
+Z41 VVgjBKefNXhiCkofL>Hjmz1
 S1
 R4
-Z23 w1719039303
-Z24 8../tb/tb_fourAdder.sv
-Z25 F../tb/tb_fourAdder.sv
+Z42 w1719065719
+Z43 8C:/Users/jihut/Downloads/de0_empty/design/FourBit_dff.sv
+Z44 FC:/Users/jihut/Downloads/de0_empty/design/FourBit_dff.sv
+L0 1
+R8
+r1
+31
+R9
+Z45 n@four@bit_dff
+R10
+Z46 !s100 Yz?UzWcNJmY^VI^RjIKTS2
+Z47 !s105 FourBit_dff_sv_unit
+Z48 !s108 1719069086.026000
+Z49 !s107 C:/Users/jihut/Downloads/de0_empty/design/FourBit_dff.sv|
+Z50 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jihut/Downloads/de0_empty/design|C:/Users/jihut/Downloads/de0_empty/design/FourBit_dff.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vStudentID
+R1
+Z51 I=K@ieBhMzRMYLB[o=R<m:2
+Z52 Ve]C6^E1jZe1@bYcMn9_JM3
+S1
+R4
+Z53 w1719064388
+Z54 8C:/Users/jihut/Downloads/de0_empty/design/StudentID.sv
+Z55 FC:/Users/jihut/Downloads/de0_empty/design/StudentID.sv
+L0 1
+R8
+r1
+31
+R9
+R10
+Z56 n@student@i@d
+Z57 !s100 `KEi<3MeCZR?o<=>H7;CR1
+Z58 !s105 StudentID_sv_unit
+Z59 !s108 1719069086.373000
+Z60 !s107 C:/Users/jihut/Downloads/de0_empty/design/StudentID.sv|
+Z61 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jihut/Downloads/de0_empty/design|C:/Users/jihut/Downloads/de0_empty/design/StudentID.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vtb_final_exam
+R1
+Z62 IZ[B?@AFOR5V<ceO3QM3Da2
+Z63 VX059ZZm>hG=5aQS`Qe6zl3
+Z64 !s105 tb_final_exam_sv_unit
+S1
+R4
+Z65 w1719068048
+Z66 8../tb/tb_final_exam.sv
+Z67 F../tb/tb_final_exam.sv
 L0 1
 R8
 r1
 31
 o-O0
-Z26 ntb_four@adder
 !i10b 1
-Z27 !s100 o6=Z`6k>]VG4Q:]e5SdF53
+Z68 !s100 j@I_LEYG1JZVi1AEGllj=3
 !s85 0
-Z28 !s108 1719039537.805000
-Z29 !s107 ../tb/tb_fourAdder.sv|
-Z30 !s90 -reportprogress|300|../tb/tb_fourAdder.sv|
+Z69 !s108 1719069087.972000
+Z70 !s107 ../tb/tb_final_exam.sv|
+Z71 !s90 -reportprogress|300|../tb/tb_final_exam.sv|
 !s101 -O0

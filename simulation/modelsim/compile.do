@@ -3,8 +3,8 @@
 
 
 # ------------------------------------------------------------
-vlog ../tb/tb_fourAdder.sv
-vlog ../../design/fouradder.sv
+vlog ../tb/tb_final_exam.sv
+vlog ../../design/final_exam.sv
 
 
 

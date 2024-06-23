@@ -1,5 +1,5 @@
 Analysis & Elaboration report for mcu
-Sat Jun 22 14:55:04 2024
+Sat Jun 22 23:11:19 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -10,9 +10,10 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "fouradder:fa"
-  6. Analysis & Elaboration Messages
-  7. Analysis & Elaboration Suppressed Messages
+  5. Port Connectivity Checks: "finall:ff|fouradder:ff3"
+  6. Port Connectivity Checks: "finall:ff"
+  7. Analysis & Elaboration Messages
+  8. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -38,10 +39,10 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                  ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sat Jun 22 14:55:04 2024      ;
+; Analysis & Elaboration Status      ; Successful - Sat Jun 22 23:11:19 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; mcu                                        ;
-; Top-level Entity Name              ; tb_fourAdder                               ;
+; Top-level Entity Name              ; tb_final_exam                              ;
 ; Family                             ; Cyclone III                                ;
 ; Total logic elements               ; N/A until Partition Merge                  ;
 ;     Total combinational functions  ; N/A until Partition Merge                  ;
@@ -72,7 +73,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C16F484C6       ;                    ;
-; Top-level entity name                                                      ; tb_fourAdder       ; mcu                ;
+; Top-level entity name                                                      ; tb_final_exam      ; mcu                ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -153,13 +154,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "finall:ff|fouradder:ff3"                                                                                                                                                              ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                            ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Cin     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; Cin[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; Cout    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "fouradder:fa"                                                                       ;
+; Port Connectivity Checks: "finall:ff"                                                                          ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; S    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; Cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sum  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; tm   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -169,90 +182,76 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sat Jun 22 14:55:03 2024
+    Info: Processing started: Sat Jun 22 23:11:18 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mcu -c mcu --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_fouradder.sv
-    Info (12023): Found entity 1: tb_fourAdder
-Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_birth.sv
-    Info (12023): Found entity 1: tb_birth
-Info (12021): Found 1 design units, including 1 entities, in source file design/birthday.sv
-    Info (12023): Found entity 1: bir
-Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_student_id.sv
-    Info (12023): Found entity 1: tb_student_id
-Info (12021): Found 1 design units, including 1 entities, in source file design/studentid.sv
-    Info (12023): Found entity 1: StudentID
-Info (12021): Found 1 design units, including 1 entities, in source file design/unit.sv
-    Info (12023): Found entity 1: unit_digit
-Info (12021): Found 1 design units, including 1 entities, in source file design/unit_digit_mod6.sv
-    Info (12023): Found entity 1: unit_digit_mod6
-Info (12021): Found 1 design units, including 1 entities, in source file design/clock.sv
-    Info (12023): Found entity 1: clock
-Info (12021): Found 1 design units, including 1 entities, in source file design/rgy_combination.sv
-    Info (12023): Found entity 1: RGY_combination
-Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/testbench_trafficlight.sv
-    Info (12023): Found entity 1: testbench_trafficlight
-Info (12021): Found 1 design units, including 1 entities, in source file design/trafficlight.sv
-    Info (12023): Found entity 1: trafficlight
-Info (12021): Found 1 design units, including 1 entities, in source file design/dff_pos.sv
-    Info (12023): Found entity 1: dff_pos_sync
-Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/testbench_4bit_count.sv
-    Info (12023): Found entity 1: testbench_4bit_count
-Info (12021): Found 1 design units, including 1 entities, in source file design/4bit_counter.sv
-    Info (12023): Found entity 1: Fbit_count
-Info (12021): Found 1 design units, including 1 entities, in source file design/freg_div_23.sv
-    Info (12023): Found entity 1: freg_div_23
-Info (12021): Found 1 design units, including 1 entities, in source file design/fourbitcount.sv
-    Info (12023): Found entity 1: Fourbitcount
-Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/testbench_fourbitsount.sv
-    Info (12023): Found entity 1: testbench_Fourbitsount
-Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/testbench_3bitcount.sv
-    Info (12023): Found entity 1: testbench_3bitcount
-Info (12021): Found 1 design units, including 1 entities, in source file design/3bit_count.sv
-    Info (12023): Found entity 1: bit_count
-Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/testbench_sevensegdecoder.sv
-    Info (12023): Found entity 1: testbench_SevenSegDecoder
-Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/testbench_bcdadder.sv
-    Info (12023): Found entity 1: testbench_BCDadder
-Info (12021): Found 1 design units, including 1 entities, in source file design/bcdadder.sv
-    Info (12023): Found entity 1: BCDadder
-Info (12021): Found 1 design units, including 1 entities, in source file design/sevenandtwosub.sv
-    Info (12023): Found entity 1: SevenAndTwosub
-Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/testbench_sevenandtwosub.sv
-    Info (12023): Found entity 1: testbench_SevenAndTwosub
-Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/testbench_fadder.sv
-    Info (12023): Found entity 1: testbench_fadder
-Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/testbench_twosub.sv
-    Info (12023): Found entity 1: testbench_twosub
-Info (12021): Found 1 design units, including 1 entities, in source file design/sevensegdecoder.sv
-    Info (12023): Found entity 1: SevenDecoder
-Info (12021): Found 1 design units, including 1 entities, in source file design/fadder.sv
-    Info (12023): Found entity 1: FA_1B
-Info (12021): Found 1 design units, including 1 entities, in source file design/fouradder.sv
-    Info (12023): Found entity 1: fouradder
+Info (12021): Found 1 design units, including 1 entities, in source file design/fourbit_dff.sv
+    Info (12023): Found entity 1: FourBit_dff
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_final_exam.sv
+    Info (12023): Found entity 1: tb_final_exam
 Info (12021): Found 1 design units, including 1 entities, in source file design/mult.sv
     Info (12023): Found entity 1: tree2eightDecoder
-Info (12021): Found 1 design units, including 1 entities, in source file design/mcu.sv
-    Info (12023): Found entity 1: mcu
 Info (12021): Found 1 design units, including 1 entities, in source file design/sele.sv
     Info (12023): Found entity 1: sele
 Info (12021): Found 1 design units, including 1 entities, in source file design/twosub.sv
     Info (12023): Found entity 1: twosub
-Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/testbench_clock.sv
-    Info (12023): Found entity 1: testbench_clock
-Warning (10236): Verilog HDL Implicit Net warning at testbench_3bitcount.sv(9): created implicit net for "y"
+Info (12021): Found 1 design units, including 1 entities, in source file design/fadder.sv
+    Info (12023): Found entity 1: FA_1B
+Info (12021): Found 1 design units, including 1 entities, in source file design/sevenandtwosub.sv
+    Info (12023): Found entity 1: SevenAndTwosub
+Info (12021): Found 1 design units, including 1 entities, in source file design/sevensegdecoder.sv
+    Info (12023): Found entity 1: SevenDecoder
+Info (12021): Found 1 design units, including 1 entities, in source file design/bcdadder.sv
+    Info (12023): Found entity 1: BCDadder
+Info (12021): Found 1 design units, including 1 entities, in source file design/fourbitcount.sv
+    Info (12023): Found entity 1: Fourbitcount
+Info (12021): Found 1 design units, including 1 entities, in source file design/3bit_count.sv
+    Info (12023): Found entity 1: bit_count
+Info (12021): Found 1 design units, including 1 entities, in source file design/4bit_counter.sv
+    Info (12023): Found entity 1: Fbit_count
+Info (12021): Found 1 design units, including 1 entities, in source file design/trafficlight.sv
+    Info (12023): Found entity 1: trafficlight
+Info (12021): Found 1 design units, including 1 entities, in source file design/rgy_combination.sv
+    Info (12023): Found entity 1: RGY_combination
+Info (12021): Found 1 design units, including 1 entities, in source file design/unit.sv
+    Info (12023): Found entity 1: unit_digit
+Info (12021): Found 1 design units, including 1 entities, in source file design/dff_pos.sv
+    Info (12023): Found entity 1: dff_pos_sync
+Info (12021): Found 1 design units, including 1 entities, in source file design/unit_digit_mod6.sv
+    Info (12023): Found entity 1: unit_digit_mod6
+Info (12021): Found 1 design units, including 1 entities, in source file design/clock.sv
+    Info (12023): Found entity 1: clock
+Info (12021): Found 1 design units, including 1 entities, in source file design/freg_div_23.sv
+    Info (12023): Found entity 1: freg_div_23
+Info (12021): Found 1 design units, including 1 entities, in source file design/birthday.sv
+    Info (12023): Found entity 1: bir
+Info (12021): Found 1 design units, including 1 entities, in source file design/mcu.sv
+    Info (12023): Found entity 1: mcu
+Info (12021): Found 1 design units, including 1 entities, in source file design/fouradder.sv
+    Info (12023): Found entity 1: fouradder
+Info (12021): Found 1 design units, including 1 entities, in source file design/studentid.sv
+    Info (12023): Found entity 1: StudentID
+Info (12021): Found 1 design units, including 1 entities, in source file design/final_exam.sv
+    Info (12023): Found entity 1: finall
 Warning (10236): Verilog HDL Implicit Net warning at sele.sv(21): created implicit net for "X9"
 Warning (10236): Verilog HDL Implicit Net warning at sele.sv(22): created implicit net for "X10"
 Warning (10236): Verilog HDL Implicit Net warning at twosub.sv(11): created implicit net for "Cin"
-Info (12127): Elaborating entity "tb_fourAdder" for the top level hierarchy
-Warning (10175): Verilog HDL warning at tb_fourAdder.sv(19): ignoring unsupported system task
-Warning (10175): Verilog HDL warning at tb_fourAdder.sv(23): ignoring unsupported system task
-Info (12128): Elaborating entity "fouradder" for hierarchy "fouradder:fa"
-Info (12128): Elaborating entity "FA_1B" for hierarchy "fouradder:fa|FA_1B:FA_1"
+Info (12127): Elaborating entity "tb_final_exam" for the top level hierarchy
+Warning (10755): Verilog HDL warning at tb_final_exam.sv(15): assignments to clk create a combinational loop
+Warning (10175): Verilog HDL warning at tb_final_exam.sv(19): ignoring unsupported system task
+Info (12128): Elaborating entity "finall" for hierarchy "finall:ff"
+Info (12128): Elaborating entity "FourBit_dff" for hierarchy "finall:ff|FourBit_dff:dd1"
+Info (12128): Elaborating entity "dff_pos_sync" for hierarchy "finall:ff|FourBit_dff:dd1|dff_pos_sync:df1"
+Info (12128): Elaborating entity "StudentID" for hierarchy "finall:ff|StudentID:st2"
+Info (12128): Elaborating entity "fouradder" for hierarchy "finall:ff|fouradder:ff3"
+Info (12128): Elaborating entity "FA_1B" for hierarchy "finall:ff|fouradder:ff3|FA_1B:FA_1"
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk" is missing source, defaulting to GND
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/jihut/Downloads/de0_empty/output_files/mcu.map.smsg
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4602 megabytes
-    Info: Processing ended: Sat Jun 22 14:55:04 2024
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4604 megabytes
+    Info: Processing ended: Sat Jun 22 23:11:19 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 

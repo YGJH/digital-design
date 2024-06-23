@@ -10,51 +10,82 @@
 # ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -sv -work work +incdir+C:/Users/jihut/Downloads/de0_empty/simulation/tb {C:/Users/jihut/Downloads/de0_empty/simulation/tb/tb_fourAdder.sv}
+# vlog -sv -work work +incdir+C:/Users/jihut/Downloads/de0_empty/design {C:/Users/jihut/Downloads/de0_empty/design/FourBit_dff.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module tb_fourAdder
+# -- Compiling module FourBit_dff
 # 
 # Top level modules:
-# 	tb_fourAdder
+# 	FourBit_dff
+# vlog -sv -work work +incdir+C:/Users/jihut/Downloads/de0_empty/simulation/tb {C:/Users/jihut/Downloads/de0_empty/simulation/tb/tb_final_exam.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_final_exam
+# 
+# Top level modules:
+# 	tb_final_exam
 # vlog -sv -work work +incdir+C:/Users/jihut/Downloads/de0_empty/design {C:/Users/jihut/Downloads/de0_empty/design/fadder.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module FA_1B
 # 
 # Top level modules:
 # 	FA_1B
+# vlog -sv -work work +incdir+C:/Users/jihut/Downloads/de0_empty/design {C:/Users/jihut/Downloads/de0_empty/design/dff_pos.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dff_pos_sync
+# 
+# Top level modules:
+# 	dff_pos_sync
 # vlog -sv -work work +incdir+C:/Users/jihut/Downloads/de0_empty/design {C:/Users/jihut/Downloads/de0_empty/design/fouradder.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module fouradder
 # 
 # Top level modules:
 # 	fouradder
+# vlog -sv -work work +incdir+C:/Users/jihut/Downloads/de0_empty/design {C:/Users/jihut/Downloads/de0_empty/design/StudentID.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module StudentID
+# 
+# Top level modules:
+# 	StudentID
+# vlog -sv -work work +incdir+C:/Users/jihut/Downloads/de0_empty/design {C:/Users/jihut/Downloads/de0_empty/design/final_exam.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module finall
+# 
+# Top level modules:
+# 	finall
 # 
 do compile.do
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module tb_fourAdder
+# -- Compiling module tb_final_exam
 # 
 # Top level modules:
-# 	tb_fourAdder
+# 	tb_final_exam
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module fouradder
+# -- Compiling module finall
 # 
 # Top level modules:
-# 	fouradder
+# 	finall
 do sim.do
-# vsim -voptargs=+acc work.tb_fourAdder 
+# vsim -voptargs=+acc work.tb_final_exam 
 # Loading sv_std.std
-# Loading work.tb_fourAdder
+# Loading work.tb_final_exam
+# Loading work.finall
+# Loading work.FourBit_dff
+# Loading work.dff_pos_sync
+# Loading work.StudentID
 # Loading work.fouradder
 # Loading work.FA_1B
+# ** Warning: (vsim-3015) ../../design/final_exam.sv(27): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'Cin'. The port definition is at: C:/Users/jihut/Downloads/de0_empty/design/fouradder.sv(4).
+# 
+#         Region: /tb_final_exam/ff/ff3
 # .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: jihut  Hostname: CHARLES  ProcessID: 17120
 # 
-#           Attempting to use alternate WLF file "./wlft2r47wj".
+#           Attempting to use alternate WLF file "./wlftiiaymt".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft2r47wj
+#           Using alternate file: ./wlftiiaymt
 # 
 # ** Error: (vish-4014) No objects found matching '/testbench/adder1/a'.
 # Executing ONERROR command at macro ./wave.do line 13
@@ -66,18 +97,12 @@ do sim.do
 # Executing ONERROR command at macro ./wave.do line 16
 # ** Error: (vish-4014) No objects found matching '/testbench/b[5]'.
 # Executing ONERROR command at macro ./wave.do line 17
-#                    0Ä = 0110 , B = 0011 , Cin = 1 , S = 1010 , Cout = 0
-#                   10Ä = 0100 , B = 1001 , Cin = 1 , S = 1110 , Cout = 0
-#                   20Ä = 0101 , B = 1111 , Cin = 1 , S = 0101 , Cout = 1
-#                   30Ä = 0111 , B = 0001 , Cin = 1 , S = 1001 , Cout = 0
-#                   40Ä = 0110 , B = 0011 , Cin = 1 , S = 1010 , Cout = 0
-# Break in Module tb_fourAdder at ../tb/tb_fourAdder.sv line 19
-# Simulation Breakpoint: Break in Module tb_fourAdder at ../tb/tb_fourAdder.sv line 19
-# MACRO ./sim.do PAUSED at line 7
+# Break in Module tb_final_exam at ../tb/tb_final_exam.sv line 19
 add wave -position insertpoint  \
-sim:/tb_fourAdder/A \
-sim:/tb_fourAdder/B \
-sim:/tb_fourAdder/Cin \
-sim:/tb_fourAdder/Cout \
-sim:/tb_fourAdder/S
-# WARNING: No extended dataflow license exists
+sim:/tb_final_exam/S \
+sim:/tb_final_exam/clk \
+sim:/tb_final_exam/reset \
+sim:/tb_final_exam/sum \
+sim:/tb_final_exam/tm
+# Simulation Breakpoint: Break in Module tb_final_exam at ../tb/tb_final_exam.sv line 19
+# MACRO ./sim.do PAUSED at line 7

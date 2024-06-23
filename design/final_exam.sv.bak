@@ -1,0 +1,30 @@
+module final(
+    input clk,
+    input reset,
+    output [3:0] S, sum , tm
+);
+logic [3:0] tmp;
+logic ignore;
+initial begin
+    4Bit_dff dd(
+        .clk(clk),
+        .reset(reset),
+        .d(tmp),
+        .q(tm)
+    )
+    StudentID st(
+        .clk(clk) ,
+        .reset(reset),
+        .id(S)
+    );
+    fouradder f(
+        .A(S),
+        .B(tm),
+        ,Cin(0),
+        .Cout(ignore),
+        .S(sum)
+   );
+    assign tmp = tm;
+end
+endmodule
+
